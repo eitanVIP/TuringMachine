@@ -2,6 +2,24 @@
 A busy beaver kind turing machine that can execute rules and draw the board.\
 In addition there is a random rule generator.
 
+## How To Recreate A Machine
+After you run a machine and print it out, you should get something like this:\
+TuringMachine([10000000000000001101], pos- 0, Instruction(1RB), Rule(0: 0LA, 1: 1SD), [Rule(0: 1RB, 1: 1LA), Rule(0: 0LA, 1: 1SD), Rule(0: 0RC, 1: 1SB), Rule(0: 0RB, 1: 0SD)])\
+\
+The first number in [] is the strip of numbers the machine works with.\
+The pos is the position the head of the machine is now(0 is left).\
+The instruction is what the machine is running now, for example 1RB translates to "write 1, move right, jump to rule B".\
+The rule is the current running rule, it first mentions what to run if machine reads 0 and then mentions what to run if machine read 1. Notice that the instruction is the part of the current rule according to what the machine is reading.\
+Then there is a list of all the rules of the machine. When you run the program yourself you can choose any names you want but in the images I provided the rules are named A, B, C, D in this order.\
+So in this example to recreate the machine you need to create a machine with rules:\
+A: Rule(0: 1RB, 1: 1LA)\
+B: Rule(0: 0LA, 1: 1SD)\
+C: Rule(0: 0RC, 1: 1SB)\
+D: Rule(0: 0RB, 1: 0SD)\
+**In Code:**\
+![Code](https://github.com/user-attachments/assets/9e056801-d676-4820-bb20-f59cd1976e1d)
+
+
 ## Randomly Generated Examples
 These are randomly generated rules and turing machines that created these boards.
 
